@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minHeight="550.0" minWidth="850.0"
+            fx:controller="presenters.SimulationPresenter">
+    <left>
+        <VBox>
+            <Button fx:id="startStopButton" text="Stop" textAlignment="CENTER" alignment="TOP_LEFT"/>
+            <GridPane alignment="CENTER_LEFT">
+                <Label text="Statystyki" alignment="CENTER" style="-fx-font-weight: bold; -fx-font-size: 15" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+                <Label text="Obecny dzień: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="currentDay" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Liczba zwierząt: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="totalAnimals" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Liczba roślin: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="totalPlants" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Liczba wolnych pól: " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="freeFields" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Najpopularniejszy genom: " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label fx:id="mostPopularGenes" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label text="Średnia ilość energii: " GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <Label fx:id="averageEnergy" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <Label text="Średni czas życia: " GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <Label fx:id="averageLifespan" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                <Label text="Średnia liczba dzieci: " GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                <Label fx:id="averageChildren" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            </GridPane>
+            <GridPane fx:id="statisticsPane" alignment="CENTER_LEFT" visible="false">
+                <Label text="Statystyki wybranego zwierzaka" alignment="CENTER" style="-fx-font-weight: bold; -fx-font-size: 15" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+                <Label text="Genom: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="selectedGenome" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Indeks aktywnego genu: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="selectedGenomePart" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Ilość energii: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="selectedEnergy" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Zjedzonych roślin: " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="selectedEatenPlants" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Liczba posiadanych dzieci: " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label fx:id="selectedChildren" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label text="Ile dni żyje: " GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <Label fx:id="selectedAge" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <Label text="Kiedy umarł: " GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <Label fx:id="selectedTimeOfDeath" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            </GridPane>
+        </VBox>
+    </left>
+    <center>
+        <VBox alignment="CENTER">
+            <GridPane fx:id="gridPane" gridLinesVisible="true" alignment="CENTER"/>
+        </VBox>
+    </center>
+</BorderPane>

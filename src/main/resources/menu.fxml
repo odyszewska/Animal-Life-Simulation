@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" prefHeight="800" prefWidth="1100" fx:controller="presenters.MenuPresenter" alignment="BASELINE_CENTER">
+    <VBox spacing="10" alignment="CENTER" prefWidth="600" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="0.0">
+        <Text text="Darwin Project" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <GridPane hgap="10" vgap="10" alignment="CENTER">
+            <Label text="Rozmiar mapy" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-font-weight: bold"/>
+            <Label text="Wysokość:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="mapHeightField" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Szerokość:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="mapWidthField" prefWidth="100" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+            <Label text="Rośliny" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-font-weight: bold"/>
+            <Label text="Początkowa liczba roślin:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="startPlantsField" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Liczba roślin wyrastających każdego dnia:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="dailyPlantsField" prefWidth="100" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="Energia z jednej rośliny:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="plantEnergyField" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <Label text="Zwierzęta i energia" GridPane.columnIndex="0" GridPane.rowIndex="5" style="-fx-font-weight: bold"/>
+            <Label text="Początkowe zwierzęta:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="startAnimalsField" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Początkowa energia zwierząt:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="startAnimalEnergyField" prefWidth="100" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label text="Energia potrzebna do rozmnażania:" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="reproductionEnergyField" prefWidth="100" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Label text="Energia tracona przez rozmnażanie:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <TextField fx:id="energyLossReproductionField" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+            <Label text="Mutacje i genotyp" GridPane.columnIndex="0" GridPane.rowIndex="9" style="-fx-font-weight: bold"/>
+            <Label text="Minimalna liczba mutacji:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+            <TextField fx:id="minMutationsField" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label text="Maksymalna liczba mutacji:" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <TextField fx:id="maxMutationsField" prefWidth="100" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <Label text="Długość genomu:" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+            <TextField fx:id="genotypeLengthField" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+
+            <CheckBox fx:id="lifeGivingVariantCheckbox" text="wariant mapy: życiodajne truchła" GridPane.columnIndex="0" GridPane.rowIndex="12"/>
+            <CheckBox fx:id="minorCorrectionVariantCheckbox" text="wariant mutacji: lekka korekta" GridPane.columnIndex="0" GridPane.rowIndex="13"/>
+            <CheckBox fx:id="saveToFileCheckbox" text="zapisuj wyniki symulacji do pliku CSV" GridPane.columnIndex="0" GridPane.rowIndex="14"/>
+
+            <Label text="Ścieżka do pliku z konfiguracją (dotyczy importu):" GridPane.columnIndex="0" GridPane.rowIndex="15" />
+            <TextField fx:id="fileToImportField" text="config.csv" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+        </GridPane>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="createSimulationButton" text="Utwórz symulację" />
+            <Button fx:id="exportConfigButton" text="Eksportuj konfigurację" />
+            <Button fx:id="importConfigButton" text="Importuj konfigurację" />
+        </HBox>
+
+
+    </VBox>
+</StackPane>
